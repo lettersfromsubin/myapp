@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personality Type Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-blur bg-blur-1"></div>
+  <div class="bg-blur bg-blur-2"></div>
+  <div class="bg-blur bg-blur-3"></div>
+
+  <main class="app-container">
+    <section class="card">
+      <div id="quizScreen">
+        <div class="top-row">
+          <span class="tag">MBTI-Style Personality Test</span>
+          <span id="progressText" class="progress-text">Question 1 / 8</span>
+        </div>
+
+        <h1 class="main-title">Discover Your Personality Type</h1>
+        <p class="subtitle">
+          Answer these questions and find out what kind of energy, thinking style,
+          and social vibe match your personality.
+        </p>
+
+        <div class="progress-bar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <div class="question-card">
+          <h2 id="question" class="question-text"></h2>
+          <div id="answers" class="answers-box"></div>
+        </div>
+
+        <p class="small-note">Choose the answer that feels more like you.</p>
+      </div>
+
+      <div id="resultScreen" class="hidden">
+        <div class="top-row">
+          <span class="tag">Your Result</span>
+          <span class="progress-text">Completed</span>
+        </div>
+
+        <h1 class="main-title">Your Personality Type</h1>
+
+        <div class="result-card">
+          <div id="resultEmoji" class="result-emoji">✨</div>
+          <h2 id="resultType" class="result-type">The Visionary</h2>
+          <p id="resultCode" class="result-code">ENFP-style</p>
+          <p id="resultDescription" class="result-description">
+            Your description will appear here.
+          </p>
+          <p id="resultMessage" class="result-message"></p>
+        </div>
+
+        <button id="restartBtn" class="restart-btn">Try Again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
