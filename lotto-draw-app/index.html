@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로또 추첨기 웹앱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-glow page-glow-left"></div>
+  <div class="page-glow page-glow-right"></div>
+
+  <main class="app-shell">
+    <section class="hero-panel">
+      <p class="eyebrow">Lucky Pick Generator</p>
+      <h1>로또 추첨기 웹앱</h1>
+      <p class="hero-copy">
+        버튼 한 번으로 1부터 45까지의 숫자 중 6개를 중복 없이 추첨하고,
+        보너스 번호와 함께 오름차순 결과를 확인하세요.
+      </p>
+
+      <div class="controls">
+        <button id="drawBtn" class="primary-btn" type="button">번호 추첨하기</button>
+        <button id="redrawBtn" class="secondary-btn" type="button">재추첨</button>
+      </div>
+
+      <div class="status-row">
+        <span class="status-pill">6개 번호 + 보너스</span>
+        <span id="drawCount" class="draw-count">총 0회 추첨</span>
+      </div>
+    </section>
+
+    <section class="result-panel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-label">현재 결과</p>
+          <h2>이번 회차 번호</h2>
+        </div>
+        <p id="resultMessage" class="result-message">추첨 버튼을 눌러 시작하세요.</p>
+      </div>
+
+      <div id="numberStage" class="number-stage" aria-live="polite">
+        <div id="mainNumbers" class="ball-row"></div>
+        <div class="bonus-wrap">
+          <span class="bonus-label">보너스</span>
+          <div id="bonusNumber" class="lotto-ball bonus-ball placeholder">?</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="history-panel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-label">추첨 기록</p>
+          <h2>이전 결과</h2>
+        </div>
+        <p class="history-hint">최근 추첨이 위에 표시됩니다.</p>
+      </div>
+
+      <ul id="historyList" class="history-list">
+        <li class="empty-history">아직 추첨 기록이 없습니다.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
